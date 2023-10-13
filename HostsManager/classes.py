@@ -284,7 +284,10 @@ class HostsManager:
             return result
 
         def __repr__(self) -> str:
-            return self.__str__()
+            result = ""
+            for host in self:
+                result += host.__repr__() + "\n"
+            return result
 
     class Host:
         """
